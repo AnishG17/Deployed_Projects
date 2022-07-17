@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Email Sender</title>
+</head>
+<body>
+  {% comment %} <h3>Email Sender with Django!</h3> {% endcomment %}
+    <div class='container'>
+      
+    <form action="" method="POST" class="contact-form">
+        {% csrf_token %}
+        <div class="form-control">
+        <div class="tag">Full Name</div>
+        <input type="text" name="full-name">
+        </div>
+        <div class="form-control">
+            <div class="tag">Email</div>
+            <input type="text" name="email">
+        </div>
+        <div class="form-control">
+            <div class="tag">Subject</div>
+            <input type="text" name="subject">
+        </div>
+        <div class="form-control">
+            <div class="tag">Message</div>
+            <textarea name="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-control"></div>
+        <input type="Submit" class="btn submit-btn" value="Send message">
+    </div>
+</body>
+</html> 

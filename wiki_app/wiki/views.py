@@ -5,7 +5,7 @@ def index(request):
     if request.method == 'POST':
         search = request.POST['search']
         try:
-            result = wikipedia.summary(search,sentences = 100) #No of sentences that you want as output
+            result = wikipedia.summary(search,sentences = 3) #No of sentences that you want as output
         except:
             return HttpResponse("Wrong Input")
         return render(request,"index.html",{"result":result})

@@ -1,0 +1,14 @@
+h1 {
+    background-color: brown;
+    border-style: groove;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    background-color: bisque;
+}
+
+body {
+    background-color: black;
+}

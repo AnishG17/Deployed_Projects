@@ -18,6 +18,5 @@ from django.urls import path, include
 # from word_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',views.counter,name='counter'),
     path('', include('word_app.urls')),
 ]

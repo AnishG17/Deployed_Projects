@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    background-color: red;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(234, 255, 0);
+}
+
+#butt {
+    background-color: red;
+    width: fit-content;
+}

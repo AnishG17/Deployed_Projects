@@ -4,5 +4,5 @@ from word_app import views
 # from django.conf.urls.static import static
 
 urlpatterns = [
-	path('counter',views.counter, name='counter'),
+	path('',views.counter, name='counter'),
 ]

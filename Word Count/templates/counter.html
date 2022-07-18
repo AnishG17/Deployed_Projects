@@ -1,29 +1,41 @@
-{% if i %}
-<div class="mb-2" style="border-style: groove;border-radius: 10px;">
-  <div class="card-header">
-    <p class="m-0" style="font-size: 20px;">{{word}} Word's in that text</p>
-  
-  
-  </div>
-</div>
-{% endif %}
-  
-<div class="col-12 pb-3" style="background-color:  #c2d6d6; border: 2px; border-style: groove; border-radius: 10px;">
-  <form action="counter" method="POST"> {% csrf_token %}
-    <div class="form-group">
-      <label for="text1">Paste you're text</label>
-      <textarea class="form-control" placeholder="Paste you're text here to count word and character" 
-                name="texttocount" id="text1" rows="8" style="background-color: #f0f5f5;">{{text}}</textarea>
-    </div>
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Word Count</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/CSS.css">
+  </head>
+  <body>
+    <h2>Word Counter!</h2>
+    
+    <div id='cen' class="col-12 pb-3" >
+    <form action="counter" method="POST"> {% csrf_token %}
+      <div class="form-group">
+        <h3>Your text goes here </h3>
+      <textarea class="form-control" placeholder="Paste you're text here!"
+            name="texttocount" id="text1" rows="11" cols='33' >{{text}}</textarea>
+      </div>
       
-    <!-- ads section start-->
-    <div class="text-center">
-      ads
-    </div>
-      
-    <!-- ads section end -->
-    <div class="form-group text-center">
+      <!-- ads section end -->
+      <div class="form-group text-center">
       <button type="submit" class="btn btn-primary w-25" >Run Counter</button>
+      </div>
+    </form>
     </div>
-  </form>
-</div>
+    {% if i %}
+    <div class="mb-2">
+    <div class="card-header">
+      <h3>Word's in that text : {{word}} </h3>
+    
+    
+    </div>
+    </div>
+    {% endif %}
+    
+    <script src="" async defer></script>
+  </body>
+</html>

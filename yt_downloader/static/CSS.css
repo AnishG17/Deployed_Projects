@@ -12,6 +12,6 @@ h1 {
 }
 
 #butt {
-    background-color: red;
-    width: fit-content;
+    background-color: orange;
+    /* width: fit-content; */
 }
